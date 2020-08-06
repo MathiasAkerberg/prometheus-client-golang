@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: prometheus-client-golang
+  labels:
+    app: prometheus-client-golang
+spec:
+  selector:
+    app: prometheus-client-golang
+  type: ClusterIP
+  ports:
+  - protocol: TCP 
+    port: 8080
+    targetPort: 8080
