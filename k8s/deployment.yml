@@ -12,6 +12,8 @@ spec:
   minReadySeconds: 5
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: "true"
       labels:
         app: prometheus-client-golang
     spec:
